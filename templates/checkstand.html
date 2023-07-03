@@ -1,0 +1,98 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>支付界面</title>
+<link rel="stylesheet" th:href="@{/win/css/pay.css}" />
+<script type="text/javascript" src="/pay/win/js/jquery-min.js"></script>
+</head>
+<body>
+	<div class="body">
+		<h1 class="mod-title">
+			<span class="ico-wechat"> <img
+				th:src="@{|/win/images/${data.icon}.png|}" /></span> <span class="text">扫码支付</span>
+		</h1>
+		<div class="mod-ct">
+			<div class="order"></div>
+			<div class="detail-ct" th:if="${not #strings.isEmpty(data.showInfo)}">
+				<span style="
+				    display: block;
+				    font-size: 30px;
+				    color :red;" 
+				    th:text="${data.showInfo}"></span>
+			</div>
+			<div class="amount" th:if="${not #strings.isEmpty(data.showInfo)}">
+				<span th:text="|BTC ${data.money}|"></span>
+			</div>
+			<div class="amount" th:if="${#strings.isEmpty(data.showInfo)}">
+				<span th:text="|￥${data.money}|"></span>
+			</div>
+			<div class="qr-image">
+				<img th:src="${data.qrUrl}" width="280px" height="270px"
+					style="margin-left: 10px; margin-top: 20px" />
+			</div>
+			<div class="detail-ct" th:if="${not #strings.isEmpty(data.remark)}">
+				<span style="
+				    display: block;
+				    height: 100px;
+				    line-height: 100px;
+				    font-size: 18px;" 
+				    th:text="${data.remark}">
+				</span>
+			</div>
+			<div class="detail detail-open" id="orderDetail">
+				<dl class="detail-ct" style="display: block;">
+					<dt>交易单号</dt>
+					<dd id="billId" th:text="${data.orderNum}"></dd>
+					<dt>创建时间</dt>
+					<dd id="createTime"
+						th:text="${#dates.format(#dates.createNow(), 'yyyy/MM/dd HH:mm')}"></dd>
+				</dl>
+			</div>
+			
+			<div class="tip">
+				<span class="dec dec-left"></span> <span class="dec dec-right"></span>
+				<div class="ico-scan"></div>
+				<div >
+					<p>扫描二维码完成支付</p>
+				</div>
+			</div>
+			
+		</div>
+		<div class="foot">
+			<div class="inner">
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<script th:inline="javascript" type="text/javascript">
+		$(function() {
+		
+			//如果是其他平台的支付方式则轮询
+			var data = [[${data}]];
+			if(data.showInfo = '') 
+				setTimeout(ajaxRefresh, 5000);
+			var orderId = data.orderNum;
+			var paymentCode = data.paymentCode;
+			function ajaxRefresh() {
+				$.ajax({
+					url : "/pay/queryState",
+					type : 'GET',
+					data : {
+						orderId : orderId,
+						paymentCode :paymentCode
+					},
+					success : function(obj) {
+						if (obj == '10') {
+							setTimeout(ajaxRefresh, 3000);
+						} else {
+							window.location.href = '/pay/callback?state='+obj;
+						}
+					}
+				})
+			};
+			
+			
+		})
+	</script>
+</body>
+</html>

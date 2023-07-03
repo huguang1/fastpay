@@ -1,0 +1,32 @@
+*{padding:0; margin:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-family: "microsoft yahei","微软雅黑",sans-serif;}
+body{width:100%; height: 100%;  background:#fff;color: #333333;}
+html{-webkit-font-smoothing: antialiased;}
+a,button,input,textarea{-webkit-tap-highlight-color: rgba(0,0,0,0)}
+.clearfix{overflow:hidden;_zoom:1;}
+.clearfix:after {content: ""; display:block; height:0; clear:both ;visibility:hidden;}
+img{border:none;}
+ul,ol{list-style:none;}
+input[type="text"]{-moz-appearance:textfield;}
+a,button,input,textarea{-webkit-tap-highlight-color: rgba(0,0,0,0);outline:none; text-decoration: none;}
+.left{float:left;}
+.right{float:right;}
+
+
+.ordmain{width: 1000px; margin:90px auto 0; padding:0 46px 30px; border:1px solid #f2f2f2; border-top:1px solid #fbd79e;}
+.rdtop{border:1px dotted #fbd79e; padding:24px 40px; background: #fffdf3; }
+.ordtil{font-size: 20px; padding: 30px 0;}
+.rdnum{display:inline-block; font-size: 18px;  }
+.rdprice{display:inline-block; font-size: 18px; margin-left:40px; }
+.rdprice span{color: #f63375; font-weight: bold; padding: 0 6px;}
+.wymain h4{padding:40px 0 20px; font-size: 20px; font-weight: normal;}
+.wymain h4 span{color: #f63375; }
+.wycon ul:after {content: ""; display:block; height:0; clear:both ;visibility:hidden;}
+.wycon li{width:160px; height:40px; float:left;margin-right:20px; margin-bottom: 20px; border:1px solid #c1bfbf; }
+.wycon li:nth-child(5n){margin-right: 0;}
+.wycon li a{display: block; width:100%; height:100%;position: relative;}
+.wycon li img{display: block; margin:0 auto;}
+.wycon li:hover,.wycon li.on{border: 2px solid #157efb;}
+.wycon li:hover a:after,.wycon li.on a:after{ content:''; position: absolute; z-index: 2; width:24px; height:24px; right: 0; bottom: 0; background: url(../images/iicon.png) no-repeat;}
+
+.btnsrow{margin-top: 30px; text-align: center;}
+.btns{width:172px; height:56px; line-height: 56px; font-size:20px; color:#fff;  display: inline-block; margin: 0 25px; background: url(../images/btns.png) no-repeat;}

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=2.0"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="keywords" content="#" />
+    <meta name="description" content="#" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="">
+    <title>澳|门|金|沙微信|支付宝快速充值中心（秒到账）</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/layer.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="//pv.sohu.com/cityjson?ie=utf-8"></script>
+    <style type="text/css">
+        .auto-style1 {
+            color: #0950D0;
+        }
+    </style>
+</head>
+
+<body>
+<form method="post" id="pay" action="../pay_center.php">
+    <div class="bod">
+        <div class="header" style="background:#000"><img src="images/logo.png" alt=""></div>
+        <!--滚动条-->
+        <div class="td_f">
+            <p class="so_p"><img src="images/pic_1.jpg" alt="" /></p>
+            <div class="scrollleft">
+                <ul>
+                    <li><a href="https://dldir1.qq.com/weixin/android/weixin657android1040.apk">请安装6.5.7版微信，并关闭自动升级。点此下载</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--滚动条-->
+        <div class="m_at">
+            <span>会员账号</span>
+            <input type="text" class="select_ipt" name="username" id="username" placeholder="填写您的会员账号，无需加@11" onpaste="return false" onKeyUp="value=value.replace(/[^\w\.\/]/ig,'')" >
+        </div>
+        <div class="m_at">
+            <span>确认账号</span>
+            <input type="text" class="select_ipt" name="rusername"  id="rusername" placeholder="再次填写您的会员账号" onpaste="return false" onKeyUp="value=value.replace(/[^\w\.\/]/ig,'')">
+        </div>
+        <div class="m_at">
+            <span>存款额度</span>
+            <input type="text" class="select_ipt" name="coin" id="coin" placeholder="在这里填写准备充值的金额" onKeyUp="value=this.value.replace(/\D+/g,'')">
+            <input type="hidden" id ="saveLimit" value="10,50000" />
+        </div>
+        <div class="f_ar">
+            <div class="f_m1" id="redioTd">支付类型</div>
+            <!-- end mycode2 -->
+
+
+            <div class="f_m3">
+                <span>存款时间:</span>
+                <input type="text" class="select_ipt" name="P_Time" id="P_Time" value="2016-01-01 00:00:00" readonly="readonly">
+            </div>
+            <div class="f_m4"><a href="javascript:btnOK_zf_onclick();">确认支付</a>
+            </div>
+            <div class="sp_n">
+
+                <div style="margin: -10px 0px 10px 0px; background-color: #efefef;">
+                    <table class="content-table">
+                        <tr>
+                            <td colspan="4">常用链接</td>
+                        </tr>
+                        <tr>
+                            <td><u><a target="_blank" href="https://dldir1.qq.com/weixin/android/weixin657android1040.apk" target="_blank">6.5.7版微信</a></u></td>
+                            <td><u><a target="_blank" href="https://7726hd.com/" target="_blank">活动大厅</a></u></td>
+                            <td><u><a target="_blank" href="https://www.z7726.com/static/images/wxzfb.jpg" target="_blank">手机支付</a></u></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><u><a target="_blank" href="http://www.g7726.com" target="_blank">立即游戏</a></u></td>
+                            <td><u><a target="_blank" href="https://www.7726678.com" target="_blank">官网验证</a></u></td>
+                            <td><u><a target="_blank" href="https://messenger3.providesupport.com/messenger/0is6whlz41l0g0mr66ucmu1ybu.html" target="_blank">在线客服</a></u></td>
+
+                        </tr>
+
+                    </table>
+                </div>
+
+                <h3>温馨提示</h3>
+                <p><span>1、</span><em>请安装6.5.7版微信，6.5.8版无法通过识别相册二维码进行支付！安卓用户请点击上方链接下载，苹果用户可以通过爱思助手下载6.5.7版微信。</em></p>
+                <p><span>2、</span><em>为了避免掉单情况的发生，请等到出现"支付成功"的提示再关闭页面。</em></p>
+                <p><span>3、</span><em>支付未到账？无法支付？请<font color="#0000FF"><a target="_blank" href="https://messenger3.providesupport.com/messenger/0is6whlz41l0g0mr66ucmu1ybu.html" style="text-decoration: none">联系在线客服</a></font>进行咨询。</em></p>
+
+            </div>
+            <div class="foot">Copyright &copy; s7726.com 版权所有</div>
+        </div>
+        </div>
+</form>
+</body>
+<script src="js/index.js"></script>
+</html>

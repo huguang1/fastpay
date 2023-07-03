@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="shortcut icon" href="win/images/favicon.ico" type="image/x-icon" />
+<title>澳|门|金|沙快速充值中心</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" href="win/css/pc.css" />
+</head>
+<body>
+	<form id="pay" name="payForm">
+		<div class="header">
+			<div class="logo">
+				<img src="win/images/logo.png" />
+			</div>
+			<div class="online-service">
+				<img src="win/images/online_right.png" />
+			</div>
+		</div>
+		<div class="content">
+
+			<a href="#"
+				onclick="window.open('https://messenger3.providesupport.com/messenger/0is6whlz41l0g0mr66ucmu1ybu.html','_blank','menubar=0,location=0,scrollbars=auto,resizable=1,status=0,width=670,height=1080')"
+				class="service"></a>
+			<div class="item" style="margin-right: 10px;">
+				<div class="hd">
+					<h2>常用链接</h2>
+					<span class="txt"><font color="#FF0000">会员账号填写错误造成未到账时，请联系在线客服</font></span>
+				</div>
+				<div class="bd">
+					<div class="btnbox">
+						<a class="btn" href="http://www.g7726.com/" target="_blank"><img
+							src="win/images/nav1.png"></a> <a class="btn"
+							href="https://7726hd.com/" target="_blank"><img
+							src="win/images/nav2.png"></a> <a class="btn"
+							href="https://www.7726678.com/" target="_blank"><img
+							src="win/images/nav3.png"></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<div class="hd"></div>
+				<div class="bd">
+					<div class="btnbox">
+						<a class="btn" href="https://www.7726678.com/jinsha/"
+							target="_blank"><img src="win/images/nav4.png"></a> <a
+							class="btn" href="https://www.7726app.com/hy/" target="_blank"><img
+							src="win/images/nav5.png"></a> <a class="btn"
+							href="https://www.7726app.com/" target="_blank"><img
+							src="win/images/nav6.png"></a>
+
+					</div>
+				</div>
+			</div>
+			<!--提示文字-->
+			<div>
+
+				<marquee scrollamount="5">
+					<p>
+						<span style="font-size: 20px;"><strong>★<span
+								id="notify" style="font-size: 16px;"></span>★
+						</strong></span>
+					</p>
+				</marquee>
+
+			</div>
+			<!--提示文字-->
+			<table class="content-table">
+				<tr>
+					<td class="title"><b>会员账号：</b></td>
+					<td class="inputtd"><input name="client_type" id="client_type"
+						type="hidden" value="1" /> <input name="username" id="username"
+						type="text" value="" class="table-input"
+						placeholder="在这里填写会员账号。（会员账号后面无需加@11）" /></td>
+					<td align="center"><font color="#FF0000">*必填</font></td>
+				</tr>
+				<tr>
+					<td class="title"><b>确认账号：</b></td>
+					<td><input name="rusername" id="rusername" type="text"
+						value="" class="table-input" placeholder="请再次填写会员账号，以便确认会员账号填写正确。" />
+					</td>
+					<td align="center"><font color="#FF0000">*必填</font></td>
+				</tr>
+				<tr>
+					<td class="title"><b>支付类型：</b></td>
+					<td id="redioTd"></td>
+					<td align="center"><font color="#FF0000">*必选</font></td>
+				</tr>
+				<tr>
+					<td class="title"><b>存款额度：</b></td>
+					<td><input type="text" name="coin" id="coin"
+						class="table-input" placeholder="在这里填写准备充值的金额" /> <input
+						type="hidden" id="saveLimit" value="10,50000" /></td>
+					<td align="center"><font color="#FF0000">*必填</font></td>
+				</tr>
+				<tr>
+					<td class="title"><b>存款时间：</b></td>
+					<td><input name="P_Time" id="P_Time" type="text" value=""
+						class="table-input" readonly="readonly" /></td>
+					<td align="center">无需填写</td>
+				</tr>
+			</table>
+			<div class="form-btn">
+				<a href="javascript:btnOKonclick();">确认支付</a>
+			</div>
+			<p class="tips">
+				<span style="color: #f00;">温馨提示：</span>
+				为了避免掉单情况的发生，请您在支付完成后，等到提示"支付成功",再关闭页面！感谢配合！！！ <br>支付成功后，若3分钟内未能及时到达您的会员账号，请联系
+				<a href="#"
+					onclick="window.open('https://messenger3.providesupport.com/messenger/0is6whlz41l0g0mr66ucmu1ybu.html','_blank','menubar=0,location=0,scrollbars=auto,resizable=1,status=0,width=670,height=1080')"
+					style="color: #f00">【在线客服】</a>进行咨询；<br>微信单笔最高1万，支付宝最高3万。祝您游戏愉快，盈利多多！O(∩_∩)O
+			</p>
+		</div>
+		<div class="copyright">Copyright &copy; 7726.com Reserved</div>
+	</form>
+	<script>
+        var host = window.location.hostname;
+        var port = window.location.port;
+        var local = (host == "127.0.0.1" || host == "localhost" || port == 8080) ? true : false;
+        if (!local && window.location.href.indexOf("/pay") > -1) {
+            var href = window.location.origin;
+            window.location.href =  href;
+        }
+	</script>
+	<script type="text/javascript" src="win/js/jquery-min.js"></script>
+	<script type="text/javascript" src="win/js/layer.js"></script>
+	<script type="text/javascript" src="win/js/index.js"></script>
+	<script src="//pv.sohu.com/cityjson?ie=utf-8"></script>
+</body>
+</html>
+

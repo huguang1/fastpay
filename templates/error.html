@@ -1,0 +1,48 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>通道关闭</title>
+<script type="text/javascript" src="/static/win/js/jquery-min.js"></script>
+<style>
+body {
+	font-size: 14px;
+}
+
+h3 {
+	font-size: 20px;
+	color: #444;
+	text-align: center;
+	padding-top: 30px;
+	font-weight: normal;
+}
+
+p {
+	color: #444;
+	text-align: center;
+	padding-top: 30px;
+	font-weight: normal;
+}
+</style>
+</head>
+
+<body>
+	<h3 id="errorMsg">{{ errorMsg }}</h3>
+	<p>此页面3秒后自动跳转主页</p>
+</body>
+<script th:inline="javascript" type="text/javascript">
+
+$(function() {
+	
+	var oMeta = document.createElement('meta');
+	oMeta.content = "3;url=/";
+	oMeta.httpEquiv="refresh";
+	document.getElementsByTagName('head')[0].appendChild(oMeta);
+
+});
+
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>支付结果</title>
+<style type="text/css">
+body {
+	font-family: "Microsoft YaHei" ! important;
+}
+
+p {
+	line-height: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+	<p style='text-align: center;' th:if="{{ state }} =='30'">交易成功！
+	<p style='text-align: center;' th:if="{{ state }} =='20'">交易失败！
+		<a href='/'>【返回首页】</a>
+	</p>
+</body>
+</html>
